@@ -3,9 +3,10 @@
 name: product-catalog-ci
 
 on: 
-    pull_request:
-        branches:
+    push:
+      branches:
         - main
+        - githubcicheck
 
 jobs:
     build:
@@ -100,7 +101,7 @@ jobs:
             git commit -m "[CI]: Update product catalog image tag"
             git push origin HEAD:main -f
 
-            
+
         
         
           
